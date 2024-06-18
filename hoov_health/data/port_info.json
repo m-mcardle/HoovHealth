@@ -1,0 +1,2007 @@
+[
+  {
+    "name" : "tcpmux",
+    "protocol" : "tcp",
+    "port" : 1
+  },
+  {
+    "name" : "compressnet",
+    "protocol" : "tcp",
+    "port" : 2
+  },
+  {
+    "name" : "compressnet",
+    "protocol" : "tcp",
+    "port" : 3
+  },
+  {
+    "name" : "rje",
+    "protocol" : "tcp",
+    "port" : 5
+  },
+  {
+    "name" : "echo",
+    "protocol" : "tcp",
+    "port" : 7
+  },
+  {
+    "name" : "discard",
+    "protocol" : "tcp",
+    "port" : 9
+  },
+  {
+    "name" : "systat",
+    "protocol" : "tcp",
+    "port" : 11
+  },
+  {
+    "name" : "daytime",
+    "protocol" : "tcp",
+    "port" : 13
+  },
+  {
+    "name" : "qotd",
+    "protocol" : "tcp",
+    "port" : 17
+  },
+  {
+    "name" : "msp",
+    "protocol" : "tcp",
+    "port" : 18
+  },
+  {
+    "name" : "chargen",
+    "protocol" : "tcp",
+    "port" : 19
+  },
+  {
+    "name" : "ftp-data",
+    "protocol" : "tcp",
+    "port" : 20
+  },
+  {
+    "name" : "ftp",
+    "protocol" : "tcp",
+    "port" : 21
+  },
+  {
+    "name" : "ssh",
+    "protocol" : "tcp",
+    "port" : 22
+  },
+  {
+    "name" : "telnet",
+    "protocol" : "tcp",
+    "port" : 23
+  },
+  {
+    "name" : "smtp",
+    "protocol" : "tcp",
+    "port" : 25
+  },
+  {
+    "name" : "nsw-fe",
+    "protocol" : "tcp",
+    "port" : 27
+  },
+  {
+    "name" : "msg-icp",
+    "protocol" : "tcp",
+    "port" : 29
+  },
+  {
+    "name" : "msg-auth",
+    "protocol" : "tcp",
+    "port" : 31
+  },
+  {
+    "name" : "dsp",
+    "protocol" : "tcp",
+    "port" : 33
+  },
+  {
+    "name" : "time",
+    "protocol" : "tcp",
+    "port" : 37
+  },
+  {
+    "name" : "rap",
+    "protocol" : "tcp",
+    "port" : 38
+  },
+  {
+    "name" : "rlp",
+    "protocol" : "tcp",
+    "port" : 39
+  },
+  {
+    "name" : "graphics",
+    "protocol" : "tcp",
+    "port" : 41
+  },
+  {
+    "name" : "name",
+    "protocol" : "tcp",
+    "port" : 42
+  },
+  {
+    "name" : "nicname",
+    "protocol" : "tcp",
+    "port" : 43
+  },
+  {
+    "name" : "mpm-flags",
+    "protocol" : "tcp",
+    "port" : 44
+  },
+  {
+    "name" : "mpm",
+    "protocol" : "tcp",
+    "port" : 45
+  },
+  {
+    "name" : "mpm-snd",
+    "protocol" : "tcp",
+    "port" : 46
+  },
+  {
+    "name" : "ni-ftp",
+    "protocol" : "tcp",
+    "port" : 47
+  },
+  {
+    "name" : "auditd",
+    "protocol" : "tcp",
+    "port" : 48
+  },
+  {
+    "name" : "tacacs",
+    "protocol" : "tcp",
+    "port" : 49
+  },
+  {
+    "name" : "re-mail-ck",
+    "protocol" : "tcp",
+    "port" : 50
+  },
+  {
+    "name" : "la-maint",
+    "protocol" : "tcp",
+    "port" : 51
+  },
+  {
+    "name" : "xns-time",
+    "protocol" : "tcp",
+    "port" : 52
+  },
+  {
+    "name" : "domain",
+    "protocol" : "tcp",
+    "port" : 53
+  },
+  {
+    "name" : "xns-ch",
+    "protocol" : "tcp",
+    "port" : 54
+  },
+  {
+    "name" : "isi-gl",
+    "protocol" : "tcp",
+    "port" : 55
+  },
+  {
+    "name" : "xns-auth",
+    "protocol" : "tcp",
+    "port" : 56
+  },
+  {
+    "name" : "xns-mail",
+    "protocol" : "tcp",
+    "port" : 58
+  },
+  {
+    "name" : "ni-mail",
+    "protocol" : "tcp",
+    "port" : 61
+  },
+  {
+    "name" : "acas",
+    "protocol" : "tcp",
+    "port" : 62
+  },
+  {
+    "name" : "whois++",
+    "protocol" : "tcp",
+    "port" : 63
+  },
+  {
+    "name" : "covia",
+    "protocol" : "tcp",
+    "port" : 64
+  },
+  {
+    "name" : "tacacs-ds",
+    "protocol" : "tcp",
+    "port" : 65
+  },
+  {
+    "name" : "sql*net",
+    "protocol" : "tcp",
+    "port" : 66
+  },
+  {
+    "name" : "bootps",
+    "protocol" : "tcp",
+    "port" : 67
+  },
+  {
+    "name" : "bootpc",
+    "protocol" : "tcp",
+    "port" : 68
+  },
+  {
+    "name" : "tftp",
+    "protocol" : "tcp",
+    "port" : 69
+  },
+  {
+    "name" : "gopher",
+    "protocol" : "tcp",
+    "port" : 70
+  },
+  {
+    "name" : "netrjs-1",
+    "protocol" : "tcp",
+    "port" : 71
+  },
+  {
+    "name" : "netrjs-2",
+    "protocol" : "tcp",
+    "port" : 72
+  },
+  {
+    "name" : "netrjs-3",
+    "protocol" : "tcp",
+    "port" : 73
+  },
+  {
+    "name" : "netrjs-4",
+    "protocol" : "tcp",
+    "port" : 74
+  },
+  {
+    "name" : "deos",
+    "protocol" : "tcp",
+    "port" : 76
+  },
+  {
+    "name" : "vettcp",
+    "protocol" : "tcp",
+    "port" : 78
+  },
+  {
+    "name" : "finger",
+    "protocol" : "tcp",
+    "port" : 79
+  },
+  {
+    "name" : "http",
+    "protocol" : "tcp",
+    "port" : 80
+  },
+  {
+    "name" : "hosts2-ns",
+    "protocol" : "tcp",
+    "port" : 81
+  },
+  {
+    "name" : "xfer",
+    "protocol" : "tcp",
+    "port" : 82
+  },
+  {
+    "name" : "mit-ml-dev",
+    "protocol" : "tcp",
+    "port" : 83
+  },
+  {
+    "name" : "ctf",
+    "protocol" : "tcp",
+    "port" : 84
+  },
+  {
+    "name" : "mit-ml-dev",
+    "protocol" : "tcp",
+    "port" : 85
+  },
+  {
+    "name" : "mfcobol",
+    "protocol" : "tcp",
+    "port" : 86
+  },
+  {
+    "name" : "kerberos",
+    "protocol" : "tcp",
+    "port" : 88
+  },
+  {
+    "name" : "su-mit-tg",
+    "protocol" : "tcp",
+    "port" : 89
+  },
+  {
+    "name" : "dnsix",
+    "protocol" : "tcp",
+    "port" : 90
+  },
+  {
+    "name" : "mit-dov",
+    "protocol" : "tcp",
+    "port" : 91
+  },
+  {
+    "name" : "npp",
+    "protocol" : "tcp",
+    "port" : 92
+  },
+  {
+    "name" : "dcp",
+    "protocol" : "tcp",
+    "port" : 93
+  },
+  {
+    "name" : "objcall",
+    "protocol" : "tcp",
+    "port" : 94
+  },
+  {
+    "name" : "supdup",
+    "protocol" : "tcp",
+    "port" : 95
+  },
+  {
+    "name" : "dixie",
+    "protocol" : "tcp",
+    "port" : 96
+  },
+  {
+    "name" : "swift-rvf",
+    "protocol" : "tcp",
+    "port" : 97
+  },
+  {
+    "name" : "tacnews",
+    "protocol" : "tcp",
+    "port" : 98
+  },
+  {
+    "name" : "metagram",
+    "protocol" : "tcp",
+    "port" : 99
+  },
+  {
+    "name" : "newacct",
+    "protocol" : "tcp",
+    "port" : 100
+  },
+  {
+    "name" : "hostname",
+    "protocol" : "tcp",
+    "port" : 101
+  },
+  {
+    "name" : "iso-tsap",
+    "protocol" : "tcp",
+    "port" : 102
+  },
+  {
+    "name" : "gppitnp",
+    "protocol" : "tcp",
+    "port" : 103
+  },
+  {
+    "name" : "acr-nema",
+    "protocol" : "tcp",
+    "port" : 104
+  },
+  {
+    "name" : "cso",
+    "protocol" : "tcp",
+    "port" : 105
+  },
+  {
+    "name" : "3com-tsmux",
+    "protocol" : "tcp",
+    "port" : 106
+  },
+  {
+    "name" : "rtelnet",
+    "protocol" : "tcp",
+    "port" : 107
+  },
+  {
+    "name" : "snagas",
+    "protocol" : "tcp",
+    "port" : 108
+  },
+  {
+    "name" : "pop2",
+    "protocol" : "tcp",
+    "port" : 109
+  },
+  {
+    "name" : "pop3",
+    "protocol" : "tcp",
+    "port" : 110
+  },
+  {
+    "name" : "sunrpc",
+    "protocol" : "tcp",
+    "port" : 111
+  },
+  {
+    "name" : "mcidas",
+    "protocol" : "tcp",
+    "port" : 112
+  },
+  {
+    "name" : "auth",
+    "protocol" : "tcp",
+    "port" : 113
+  },
+  {
+    "name" : "audionews",
+    "protocol" : "tcp",
+    "port" : 114
+  },
+  {
+    "name" : "sftp",
+    "protocol" : "tcp",
+    "port" : 115
+  },
+  {
+    "name" : "ansanotify",
+    "protocol" : "tcp",
+    "port" : 116
+  },
+  {
+    "name" : "uucp-path",
+    "protocol" : "tcp",
+    "port" : 117
+  },
+  {
+    "name" : "sqlserv",
+    "protocol" : "tcp",
+    "port" : 118
+  },
+  {
+    "name" : "nntp",
+    "protocol" : "tcp",
+    "port" : 119
+  },
+  {
+    "name" : "cfdptkt",
+    "protocol" : "tcp",
+    "port" : 120
+  },
+  {
+    "name" : "erpc",
+    "protocol" : "tcp",
+    "port" : 121
+  },
+  {
+    "name" : "smakynet",
+    "protocol" : "tcp",
+    "port" : 122
+  },
+  {
+    "name" : "ntp",
+    "protocol" : "tcp",
+    "port" : 123
+  },
+  {
+    "name" : "ansatrader",
+    "protocol" : "tcp",
+    "port" : 124
+  },
+  {
+    "name" : "locus-map",
+    "protocol" : "tcp",
+    "port" : 125
+  },
+  {
+    "name" : "nxedit",
+    "protocol" : "tcp",
+    "port" : 126
+  },
+  {
+    "name" : "locus-con",
+    "protocol" : "tcp",
+    "port" : 127
+  },
+  {
+    "name" : "gss-xlicen",
+    "protocol" : "tcp",
+    "port" : 128
+  },
+  {
+    "name" : "pwdgen",
+    "protocol" : "tcp",
+    "port" : 129
+  },
+  {
+    "name" : "cisco-fna",
+    "protocol" : "tcp",
+    "port" : 130
+  },
+  {
+    "name" : "cisco-tna",
+    "protocol" : "tcp",
+    "port" : 131
+  },
+  {
+    "name" : "cisco-sys",
+    "protocol" : "tcp",
+    "port" : 132
+  },
+  {
+    "name" : "statsrv",
+    "protocol" : "tcp",
+    "port" : 133
+  },
+  {
+    "name" : "ingres-net",
+    "protocol" : "tcp",
+    "port" : 134
+  },
+  {
+    "name" : "epmap",
+    "protocol" : "tcp",
+    "port" : 135
+  },
+  {
+    "name" : "profile",
+    "protocol" : "tcp",
+    "port" : 136
+  },
+  {
+    "name" : "netbios-ns",
+    "protocol" : "tcp",
+    "port" : 137
+  },
+  {
+    "name" : "netbios-dgm",
+    "protocol" : "tcp",
+    "port" : 138
+  },
+  {
+    "name" : "netbios-ssn",
+    "protocol" : "tcp",
+    "port" : 139
+  },
+  {
+    "name" : "emfis-data",
+    "protocol" : "tcp",
+    "port" : 140
+  },
+  {
+    "name" : "emfis-cntl",
+    "protocol" : "tcp",
+    "port" : 141
+  },
+  {
+    "name" : "bl-idm",
+    "protocol" : "tcp",
+    "port" : 142
+  },
+  {
+    "name" : "imap",
+    "protocol" : "tcp",
+    "port" : 143
+  },
+  {
+    "name" : "uma",
+    "protocol" : "tcp",
+    "port" : 144
+  },
+  {
+    "name" : "uaac",
+    "protocol" : "tcp",
+    "port" : 145
+  },
+  {
+    "name" : "iso-tp0",
+    "protocol" : "tcp",
+    "port" : 146
+  },
+  {
+    "name" : "iso-ip",
+    "protocol" : "tcp",
+    "port" : 147
+  },
+  {
+    "name" : "jargon",
+    "protocol" : "tcp",
+    "port" : 148
+  },
+  {
+    "name" : "aed-512",
+    "protocol" : "tcp",
+    "port" : 149
+  },
+  {
+    "name" : "sql-net",
+    "protocol" : "tcp",
+    "port" : 150
+  },
+  {
+    "name" : "hems",
+    "protocol" : "tcp",
+    "port" : 151
+  },
+  {
+    "name" : "bftp",
+    "protocol" : "tcp",
+    "port" : 152
+  },
+  {
+    "name" : "sgmp",
+    "protocol" : "tcp",
+    "port" : 153
+  },
+  {
+    "name" : "netsc-prod",
+    "protocol" : "tcp",
+    "port" : 154
+  },
+  {
+    "name" : "netsc-dev",
+    "protocol" : "tcp",
+    "port" : 155
+  },
+  {
+    "name" : "sqlsrv",
+    "protocol" : "tcp",
+    "port" : 156
+  },
+  {
+    "name" : "knet-cmp",
+    "protocol" : "tcp",
+    "port" : 157
+  },
+  {
+    "name" : "pcmail-srv",
+    "protocol" : "tcp",
+    "port" : 158
+  },
+  {
+    "name" : "nss-routing",
+    "protocol" : "tcp",
+    "port" : 159
+  },
+  {
+    "name" : "sgmp-traps",
+    "protocol" : "tcp",
+    "port" : 160
+  },
+  {
+    "name" : "snmp",
+    "protocol" : "tcp",
+    "port" : 161
+  },
+  {
+    "name" : "snmptrap",
+    "protocol" : "tcp",
+    "port" : 162
+  },
+  {
+    "name" : "cmip-man",
+    "protocol" : "tcp",
+    "port" : 163
+  },
+  {
+    "name" : "cmip-agent",
+    "protocol" : "tcp",
+    "port" : 164
+  },
+  {
+    "name" : "xns-courier",
+    "protocol" : "tcp",
+    "port" : 165
+  },
+  {
+    "name" : "s-net",
+    "protocol" : "tcp",
+    "port" : 166
+  },
+  {
+    "name" : "namp",
+    "protocol" : "tcp",
+    "port" : 167
+  },
+  {
+    "name" : "rsvd",
+    "protocol" : "tcp",
+    "port" : 168
+  },
+  {
+    "name" : "send",
+    "protocol" : "tcp",
+    "port" : 169
+  },
+  {
+    "name" : "print-srv",
+    "protocol" : "tcp",
+    "port" : 170
+  },
+  {
+    "name" : "multiplex",
+    "protocol" : "tcp",
+    "port" : 171
+  },
+  {
+    "name" : "cl\/1",
+    "protocol" : "tcp",
+    "port" : 172
+  },
+  {
+    "name" : "xyplex-mux",
+    "protocol" : "tcp",
+    "port" : 173
+  },
+  {
+    "name" : "mailq",
+    "protocol" : "tcp",
+    "port" : 174
+  },
+  {
+    "name" : "vmnet",
+    "protocol" : "tcp",
+    "port" : 175
+  },
+  {
+    "name" : "genrad-mux",
+    "protocol" : "tcp",
+    "port" : 176
+  },
+  {
+    "name" : "xdmcp",
+    "protocol" : "tcp",
+    "port" : 177
+  },
+  {
+    "name" : "nextstep",
+    "protocol" : "tcp",
+    "port" : 178
+  },
+  {
+    "name" : "bgp",
+    "protocol" : "tcp",
+    "port" : 179
+  },
+  {
+    "name" : "ris",
+    "protocol" : "tcp",
+    "port" : 180
+  },
+  {
+    "name" : "unify",
+    "protocol" : "tcp",
+    "port" : 181
+  },
+  {
+    "name" : "audit",
+    "protocol" : "tcp",
+    "port" : 182
+  },
+  {
+    "name" : "ocbinder",
+    "protocol" : "tcp",
+    "port" : 183
+  },
+  {
+    "name" : "ocserver",
+    "protocol" : "tcp",
+    "port" : 184
+  },
+  {
+    "name" : "remote-kis",
+    "protocol" : "tcp",
+    "port" : 185
+  },
+  {
+    "name" : "kis",
+    "protocol" : "tcp",
+    "port" : 186
+  },
+  {
+    "name" : "aci",
+    "protocol" : "tcp",
+    "port" : 187
+  },
+  {
+    "name" : "mumps",
+    "protocol" : "tcp",
+    "port" : 188
+  },
+  {
+    "name" : "qft",
+    "protocol" : "tcp",
+    "port" : 189
+  },
+  {
+    "name" : "gacp",
+    "protocol" : "tcp",
+    "port" : 190
+  },
+  {
+    "name" : "prospero",
+    "protocol" : "tcp",
+    "port" : 191
+  },
+  {
+    "name" : "osu-nms",
+    "protocol" : "tcp",
+    "port" : 192
+  },
+  {
+    "name" : "srmp",
+    "protocol" : "tcp",
+    "port" : 193
+  },
+  {
+    "name" : "irc",
+    "protocol" : "tcp",
+    "port" : 194
+  },
+  {
+    "name" : "dn6-nlm-aud",
+    "protocol" : "tcp",
+    "port" : 195
+  },
+  {
+    "name" : "dn6-smm-red",
+    "protocol" : "tcp",
+    "port" : 196
+  },
+  {
+    "name" : "dls",
+    "protocol" : "tcp",
+    "port" : 197
+  },
+  {
+    "name" : "dls-mon",
+    "protocol" : "tcp",
+    "port" : 198
+  },
+  {
+    "name" : "smux",
+    "protocol" : "tcp",
+    "port" : 199
+  },
+  {
+    "name" : "src",
+    "protocol" : "tcp",
+    "port" : 200
+  },
+  {
+    "name" : "at-rtmp",
+    "protocol" : "tcp",
+    "port" : 201
+  },
+  {
+    "name" : "at-nbp",
+    "protocol" : "tcp",
+    "port" : 202
+  },
+  {
+    "name" : "at-3",
+    "protocol" : "tcp",
+    "port" : 203
+  },
+  {
+    "name" : "at-echo",
+    "protocol" : "tcp",
+    "port" : 204
+  },
+  {
+    "name" : "at-5",
+    "protocol" : "tcp",
+    "port" : 205
+  },
+  {
+    "name" : "at-zis",
+    "protocol" : "tcp",
+    "port" : 206
+  },
+  {
+    "name" : "at-7",
+    "protocol" : "tcp",
+    "port" : 207
+  },
+  {
+    "name" : "at-8",
+    "protocol" : "tcp",
+    "port" : 208
+  },
+  {
+    "name" : "qmtp",
+    "protocol" : "tcp",
+    "port" : 209
+  },
+  {
+    "name" : "z39.50",
+    "protocol" : "tcp",
+    "port" : 210
+  },
+  {
+    "name" : "914c\/g",
+    "protocol" : "tcp",
+    "port" : 211
+  },
+  {
+    "name" : "anet",
+    "protocol" : "tcp",
+    "port" : 212
+  },
+  {
+    "name" : "ipx",
+    "protocol" : "tcp",
+    "port" : 213
+  },
+  {
+    "name" : "vmpwscs",
+    "protocol" : "tcp",
+    "port" : 214
+  },
+  {
+    "name" : "softpc",
+    "protocol" : "tcp",
+    "port" : 215
+  },
+  {
+    "name" : "CAIlic",
+    "protocol" : "tcp",
+    "port" : 216
+  },
+  {
+    "name" : "dbase",
+    "protocol" : "tcp",
+    "port" : 217
+  },
+  {
+    "name" : "mpp",
+    "protocol" : "tcp",
+    "port" : 218
+  },
+  {
+    "name" : "uarps",
+    "protocol" : "tcp",
+    "port" : 219
+  },
+  {
+    "name" : "imap3",
+    "protocol" : "tcp",
+    "port" : 220
+  },
+  {
+    "name" : "fln-spx",
+    "protocol" : "tcp",
+    "port" : 221
+  },
+  {
+    "name" : "rsh-spx",
+    "protocol" : "tcp",
+    "port" : 222
+  },
+  {
+    "name" : "cdc",
+    "protocol" : "tcp",
+    "port" : 223
+  },
+  {
+    "name" : "masqdialer",
+    "protocol" : "tcp",
+    "port" : 224
+  },
+  {
+    "name" : "direct",
+    "protocol" : "tcp",
+    "port" : 242
+  },
+  {
+    "name" : "sur-meas",
+    "protocol" : "tcp",
+    "port" : 243
+  },
+  {
+    "name" : "inbusiness",
+    "protocol" : "tcp",
+    "port" : 244
+  },
+  {
+    "name" : "link",
+    "protocol" : "tcp",
+    "port" : 245
+  },
+  {
+    "name" : "dsp3270",
+    "protocol" : "tcp",
+    "port" : 246
+  },
+  {
+    "name" : "subntbcst_tftp",
+    "protocol" : "tcp",
+    "port" : 247
+  },
+  {
+    "name" : "bhfhs",
+    "protocol" : "tcp",
+    "port" : 248
+  },
+  {
+    "name" : "rap",
+    "protocol" : "tcp",
+    "port" : 256
+  },
+  {
+    "name" : "set",
+    "protocol" : "tcp",
+    "port" : 257
+  },
+  {
+    "name" : "yak-chat",
+    "protocol" : "tcp",
+    "port" : 258
+  },
+  {
+    "name" : "esro-gen",
+    "protocol" : "tcp",
+    "port" : 259
+  },
+  {
+    "name" : "openport",
+    "protocol" : "tcp",
+    "port" : 260
+  },
+  {
+    "name" : "nsiiops",
+    "protocol" : "tcp",
+    "port" : 261
+  },
+  {
+    "name" : "arcisdms",
+    "protocol" : "tcp",
+    "port" : 262
+  },
+  {
+    "name" : "hdap",
+    "protocol" : "tcp",
+    "port" : 263
+  },
+  {
+    "name" : "bgmp",
+    "protocol" : "tcp",
+    "port" : 264
+  },
+  {
+    "name" : "x-bone-ctl",
+    "protocol" : "tcp",
+    "port" : 265
+  },
+  {
+    "name" : "sst",
+    "protocol" : "tcp",
+    "port" : 266
+  },
+  {
+    "name" : "td-service",
+    "protocol" : "tcp",
+    "port" : 267
+  },
+  {
+    "name" : "td-replica",
+    "protocol" : "tcp",
+    "port" : 268
+  },
+  {
+    "name" : "http-mgmt",
+    "protocol" : "tcp",
+    "port" : 280
+  },
+  {
+    "name" : "personal-link",
+    "protocol" : "tcp",
+    "port" : 281
+  },
+  {
+    "name" : "cableport-ax",
+    "protocol" : "tcp",
+    "port" : 282
+  },
+  {
+    "name" : "rescap",
+    "protocol" : "tcp",
+    "port" : 283
+  },
+  {
+    "name" : "corerjd",
+    "protocol" : "tcp",
+    "port" : 284
+  },
+  {
+    "name" : "fxp-1",
+    "protocol" : "tcp",
+    "port" : 286
+  },
+  {
+    "name" : "k-block",
+    "protocol" : "tcp",
+    "port" : 287
+  },
+  {
+    "name" : "novastorbakcup",
+    "protocol" : "tcp",
+    "port" : 308
+  },
+  {
+    "name" : "entrusttime",
+    "protocol" : "tcp",
+    "port" : 309
+  },
+  {
+    "name" : "bhmds",
+    "protocol" : "tcp",
+    "port" : 310
+  },
+  {
+    "name" : "asip-webadmin",
+    "protocol" : "tcp",
+    "port" : 311
+  },
+  {
+    "name" : "vslmp",
+    "protocol" : "tcp",
+    "port" : 312
+  },
+  {
+    "name" : "magenta-logic",
+    "protocol" : "tcp",
+    "port" : 313
+  },
+  {
+    "name" : "opalis-robot",
+    "protocol" : "tcp",
+    "port" : 314
+  },
+  {
+    "name" : "dpsi",
+    "protocol" : "tcp",
+    "port" : 315
+  },
+  {
+    "name" : "decauth",
+    "protocol" : "tcp",
+    "port" : 316
+  },
+  {
+    "name" : "zannet",
+    "protocol" : "tcp",
+    "port" : 317
+  },
+  {
+    "name" : "pkix-timestamp",
+    "protocol" : "tcp",
+    "port" : 318
+  },
+  {
+    "name" : "ptp-event",
+    "protocol" : "tcp",
+    "port" : 319
+  },
+  {
+    "name" : "ptp-general",
+    "protocol" : "tcp",
+    "port" : 320
+  },
+  {
+    "name" : "pip",
+    "protocol" : "tcp",
+    "port" : 321
+  },
+  {
+    "name" : "rtsps",
+    "protocol" : "tcp",
+    "port" : 322
+  },
+  {
+    "name" : "texar",
+    "protocol" : "tcp",
+    "port" : 333
+  },
+  {
+    "name" : "pdap",
+    "protocol" : "tcp",
+    "port" : 344
+  },
+  {
+    "name" : "pawserv",
+    "protocol" : "tcp",
+    "port" : 345
+  },
+  {
+    "name" : "zserv",
+    "protocol" : "tcp",
+    "port" : 346
+  },
+  {
+    "name" : "fatserv",
+    "protocol" : "tcp",
+    "port" : 347
+  },
+  {
+    "name" : "csi-sgwp",
+    "protocol" : "tcp",
+    "port" : 348
+  },
+  {
+    "name" : "mftp",
+    "protocol" : "tcp",
+    "port" : 349
+  },
+  {
+    "name" : "matip-type-a",
+    "protocol" : "tcp",
+    "port" : 350
+  },
+  {
+    "name" : "matip-type-b",
+    "protocol" : "tcp",
+    "port" : 351
+  },
+  {
+    "name" : "dtag-ste-sb",
+    "protocol" : "tcp",
+    "port" : 352
+  },
+  {
+    "name" : "ndsauth",
+    "protocol" : "tcp",
+    "port" : 353
+  },
+  {
+    "name" : "bh611",
+    "protocol" : "tcp",
+    "port" : 354
+  },
+  {
+    "name" : "datex-asn",
+    "protocol" : "tcp",
+    "port" : 355
+  },
+  {
+    "name" : "cloanto-net-1",
+    "protocol" : "tcp",
+    "port" : 356
+  },
+  {
+    "name" : "bhevent",
+    "protocol" : "tcp",
+    "port" : 357
+  },
+  {
+    "name" : "shrinkwrap",
+    "protocol" : "tcp",
+    "port" : 358
+  },
+  {
+    "name" : "nsrmp",
+    "protocol" : "tcp",
+    "port" : 359
+  },
+  {
+    "name" : "scoi2odialog",
+    "protocol" : "tcp",
+    "port" : 360
+  },
+  {
+    "name" : "semantix",
+    "protocol" : "tcp",
+    "port" : 361
+  },
+  {
+    "name" : "srssend",
+    "protocol" : "tcp",
+    "port" : 362
+  },
+  {
+    "name" : "rsvp_tunnel",
+    "protocol" : "tcp",
+    "port" : 363
+  },
+  {
+    "name" : "aurora-cmgr",
+    "protocol" : "tcp",
+    "port" : 364
+  },
+  {
+    "name" : "dtk",
+    "protocol" : "tcp",
+    "port" : 365
+  },
+  {
+    "name" : "odmr",
+    "protocol" : "tcp",
+    "port" : 366
+  },
+  {
+    "name" : "mortgageware",
+    "protocol" : "tcp",
+    "port" : 367
+  },
+  {
+    "name" : "qbikgdp",
+    "protocol" : "tcp",
+    "port" : 368
+  },
+  {
+    "name" : "rpc2portmap",
+    "protocol" : "tcp",
+    "port" : 369
+  },
+  {
+    "name" : "codaauth2",
+    "protocol" : "tcp",
+    "port" : 370
+  },
+  {
+    "name" : "clearcase",
+    "protocol" : "tcp",
+    "port" : 371
+  },
+  {
+    "name" : "ulistproc",
+    "protocol" : "tcp",
+    "port" : 372
+  },
+  {
+    "name" : "legent-1",
+    "protocol" : "tcp",
+    "port" : 373
+  },
+  {
+    "name" : "legent-2",
+    "protocol" : "tcp",
+    "port" : 374
+  },
+  {
+    "name" : "hassle",
+    "protocol" : "tcp",
+    "port" : 375
+  },
+  {
+    "name" : "nip",
+    "protocol" : "tcp",
+    "port" : 376
+  },
+  {
+    "name" : "tnETOS",
+    "protocol" : "tcp",
+    "port" : 377
+  },
+  {
+    "name" : "dsETOS",
+    "protocol" : "tcp",
+    "port" : 378
+  },
+  {
+    "name" : "is99c",
+    "protocol" : "tcp",
+    "port" : 379
+  },
+  {
+    "name" : "is99s",
+    "protocol" : "tcp",
+    "port" : 380
+  },
+  {
+    "name" : "hp-collector",
+    "protocol" : "tcp",
+    "port" : 381
+  },
+  {
+    "name" : "hp-managed-node",
+    "protocol" : "tcp",
+    "port" : 382
+  },
+  {
+    "name" : "hp-alarm-mgr",
+    "protocol" : "tcp",
+    "port" : 383
+  },
+  {
+    "name" : "arns",
+    "protocol" : "tcp",
+    "port" : 384
+  },
+  {
+    "name" : "ibm-app",
+    "protocol" : "tcp",
+    "port" : 385
+  },
+  {
+    "name" : "asa",
+    "protocol" : "tcp",
+    "port" : 386
+  },
+  {
+    "name" : "aurp",
+    "protocol" : "tcp",
+    "port" : 387
+  },
+  {
+    "name" : "unidata-ldm",
+    "protocol" : "tcp",
+    "port" : 388
+  },
+  {
+    "name" : "ldap",
+    "protocol" : "tcp",
+    "port" : 389
+  },
+  {
+    "name" : "uis",
+    "protocol" : "tcp",
+    "port" : 390
+  },
+  {
+    "name" : "synotics-relay",
+    "protocol" : "tcp",
+    "port" : 391
+  },
+  {
+    "name" : "synotics-broker",
+    "protocol" : "tcp",
+    "port" : 392
+  },
+  {
+    "name" : "meta5",
+    "protocol" : "tcp",
+    "port" : 393
+  },
+  {
+    "name" : "embl-ndt",
+    "protocol" : "tcp",
+    "port" : 394
+  },
+  {
+    "name" : "netcp",
+    "protocol" : "tcp",
+    "port" : 395
+  },
+  {
+    "name" : "netware-ip",
+    "protocol" : "tcp",
+    "port" : 396
+  },
+  {
+    "name" : "mptn",
+    "protocol" : "tcp",
+    "port" : 397
+  },
+  {
+    "name" : "kryptolan",
+    "protocol" : "tcp",
+    "port" : 398
+  },
+  {
+    "name" : "iso-tsap-c2",
+    "protocol" : "tcp",
+    "port" : 399
+  },
+  {
+    "name" : "work-sol",
+    "protocol" : "tcp",
+    "port" : 400
+  },
+  {
+    "name" : "ups",
+    "protocol" : "tcp",
+    "port" : 401
+  },
+  {
+    "name" : "genie",
+    "protocol" : "tcp",
+    "port" : 402
+  },
+  {
+    "name" : "decap",
+    "protocol" : "tcp",
+    "port" : 403
+  },
+  {
+    "name" : "nced",
+    "protocol" : "tcp",
+    "port" : 404
+  },
+  {
+    "name" : "ncld",
+    "protocol" : "tcp",
+    "port" : 405
+  },
+  {
+    "name" : "imsp",
+    "protocol" : "tcp",
+    "port" : 406
+  },
+  {
+    "name" : "timbuktu",
+    "protocol" : "tcp",
+    "port" : 407
+  },
+  {
+    "name" : "prm-sm",
+    "protocol" : "tcp",
+    "port" : 408
+  },
+  {
+    "name" : "prm-nm",
+    "protocol" : "tcp",
+    "port" : 409
+  },
+  {
+    "name" : "decladebug",
+    "protocol" : "tcp",
+    "port" : 410
+  },
+  {
+    "name" : "rmt",
+    "protocol" : "tcp",
+    "port" : 411
+  },
+  {
+    "name" : "synoptics-trap",
+    "protocol" : "tcp",
+    "port" : 412
+  },
+  {
+    "name" : "smsp",
+    "protocol" : "tcp",
+    "port" : 413
+  },
+  {
+    "name" : "infoseek",
+    "protocol" : "tcp",
+    "port" : 414
+  },
+  {
+    "name" : "bnet",
+    "protocol" : "tcp",
+    "port" : 415
+  },
+  {
+    "name" : "silverplatter",
+    "protocol" : "tcp",
+    "port" : 416
+  },
+  {
+    "name" : "onmux",
+    "protocol" : "tcp",
+    "port" : 417
+  },
+  {
+    "name" : "hyper-g",
+    "protocol" : "tcp",
+    "port" : 418
+  },
+  {
+    "name" : "ariel1",
+    "protocol" : "tcp",
+    "port" : 419
+  },
+  {
+    "name" : "smpte",
+    "protocol" : "tcp",
+    "port" : 420
+  },
+  {
+    "name" : "ariel2",
+    "protocol" : "tcp",
+    "port" : 421
+  },
+  {
+    "name" : "ariel3",
+    "protocol" : "tcp",
+    "port" : 422
+  },
+  {
+    "name" : "opc-job-start",
+    "protocol" : "tcp",
+    "port" : 423
+  },
+  {
+    "name" : "opc-job-track",
+    "protocol" : "tcp",
+    "port" : 424
+  },
+  {
+    "name" : "icad-el",
+    "protocol" : "tcp",
+    "port" : 425
+  },
+  {
+    "name" : "smartsdp",
+    "protocol" : "tcp",
+    "port" : 426
+  },
+  {
+    "name" : "svrloc",
+    "protocol" : "tcp",
+    "port" : 427
+  },
+  {
+    "name" : "ocs_cmu",
+    "protocol" : "tcp",
+    "port" : 428
+  },
+  {
+    "name" : "ocs_amu",
+    "protocol" : "tcp",
+    "port" : 429
+  },
+  {
+    "name" : "utmpsd",
+    "protocol" : "tcp",
+    "port" : 430
+  },
+  {
+    "name" : "utmpcd",
+    "protocol" : "tcp",
+    "port" : 431
+  },
+  {
+    "name" : "iasd",
+    "protocol" : "tcp",
+    "port" : 432
+  },
+  {
+    "name" : "nnsp",
+    "protocol" : "tcp",
+    "port" : 433
+  },
+  {
+    "name" : "mobileip-agent",
+    "protocol" : "tcp",
+    "port" : 434
+  },
+  {
+    "name" : "mobilip-mn",
+    "protocol" : "tcp",
+    "port" : 435
+  },
+  {
+    "name" : "dna-cml",
+    "protocol" : "tcp",
+    "port" : 436
+  },
+  {
+    "name" : "comscm",
+    "protocol" : "tcp",
+    "port" : 437
+  },
+  {
+    "name" : "dsfgw",
+    "protocol" : "tcp",
+    "port" : 438
+  },
+  {
+    "name" : "dasp",
+    "protocol" : "tcp",
+    "port" : 439
+  },
+  {
+    "name" : "sgcp",
+    "protocol" : "tcp",
+    "port" : 440
+  },
+  {
+    "name" : "decvms-sysmgt",
+    "protocol" : "tcp",
+    "port" : 441
+  },
+  {
+    "name" : "cvc_hostd",
+    "protocol" : "tcp",
+    "port" : 442
+  },
+  {
+    "name" : "https",
+    "protocol" : "tcp",
+    "port" : 443
+  },
+  {
+    "name" : "snpp",
+    "protocol" : "tcp",
+    "port" : 444
+  },
+  {
+    "name" : "microsoft-ds",
+    "protocol" : "tcp",
+    "port" : 445
+  },
+  {
+    "name" : "ddm-rdb",
+    "protocol" : "tcp",
+    "port" : 446
+  },
+  {
+    "name" : "ddm-dfm",
+    "protocol" : "tcp",
+    "port" : 447
+  },
+  {
+    "name" : "ddm-ssl",
+    "protocol" : "tcp",
+    "port" : 448
+  },
+  {
+    "name" : "as-servermap",
+    "protocol" : "tcp",
+    "port" : 449
+  },
+  {
+    "name" : "tserver",
+    "protocol" : "tcp",
+    "port" : 450
+  },
+  {
+    "name" : "sfs-smp-net",
+    "protocol" : "tcp",
+    "port" : 451
+  },
+  {
+    "name" : "sfs-config",
+    "protocol" : "tcp",
+    "port" : 452
+  },
+  {
+    "name" : "creativeserver",
+    "protocol" : "tcp",
+    "port" : 453
+  },
+  {
+    "name" : "contentserver",
+    "protocol" : "tcp",
+    "port" : 454
+  },
+  {
+    "name" : "creativepartnr",
+    "protocol" : "tcp",
+    "port" : 455
+  },
+  {
+    "name" : "macon-tcp",
+    "protocol" : "tcp",
+    "port" : 456
+  },
+  {
+    "name" : "scohelp",
+    "protocol" : "tcp",
+    "port" : 457
+  },
+  {
+    "name" : "appleqtc",
+    "protocol" : "tcp",
+    "port" : 458
+  },
+  {
+    "name" : "ampr-rcmd",
+    "protocol" : "tcp",
+    "port" : 459
+  },
+  {
+    "name" : "skronk",
+    "protocol" : "tcp",
+    "port" : 460
+  },
+  {
+    "name" : "datasurfsrv",
+    "protocol" : "tcp",
+    "port" : 461
+  },
+  {
+    "name" : "datasurfsrvsec",
+    "protocol" : "tcp",
+    "port" : 462
+  },
+  {
+    "name" : "alpes",
+    "protocol" : "tcp",
+    "port" : 463
+  },
+  {
+    "name" : "kpasswd",
+    "protocol" : "tcp",
+    "port" : 464
+  },
+  {
+    "name" : "urd",
+    "protocol" : "tcp",
+    "port" : 465
+  },
+  {
+    "name" : "digital-vrc",
+    "protocol" : "tcp",
+    "port" : 466
+  },
+  {
+    "name" : "mylex-mapd",
+    "protocol" : "tcp",
+    "port" : 467
+  },
+  {
+    "name" : "photuris",
+    "protocol" : "tcp",
+    "port" : 468
+  },
+  {
+    "name" : "rcp",
+    "protocol" : "tcp",
+    "port" : 469
+  },
+  {
+    "name" : "scx-proxy",
+    "protocol" : "tcp",
+    "port" : 470
+  },
+  {
+    "name" : "mondex",
+    "protocol" : "tcp",
+    "port" : 471
+  },
+  {
+    "name" : "ljk-login",
+    "protocol" : "tcp",
+    "port" : 472
+  },
+  {
+    "name" : "hybrid-pop",
+    "protocol" : "tcp",
+    "port" : 473
+  },
+  {
+    "name" : "tn-tl-w1",
+    "protocol" : "tcp",
+    "port" : 474
+  },
+  {
+    "name" : "tcpnethaspsrv",
+    "protocol" : "tcp",
+    "port" : 475
+  },
+  {
+    "name" : "tn-tl-fd1",
+    "protocol" : "tcp",
+    "port" : 476
+  },
+  {
+    "name" : "ss7ns",
+    "protocol" : "tcp",
+    "port" : 477
+  },
+  {
+    "name" : "spsc",
+    "protocol" : "tcp",
+    "port" : 478
+  },
+  {
+    "name" : "iafserver",
+    "protocol" : "tcp",
+    "port" : 479
+  },
+  {
+    "name" : "iafdbase",
+    "protocol" : "tcp",
+    "port" : 480
+  },
+  {
+    "name" : "ph",
+    "protocol" : "tcp",
+    "port" : 481
+  },
+  {
+    "name" : "bgs-nsi",
+    "protocol" : "tcp",
+    "port" : 482
+  },
+  {
+    "name" : "ulpnet",
+    "protocol" : "tcp",
+    "port" : 483
+  },
+  {
+    "name" : "integra-sme",
+    "protocol" : "tcp",
+    "port" : 484
+  },
+  {
+    "name" : "powerburst",
+    "protocol" : "tcp",
+    "port" : 485
+  },
+  {
+    "name" : "avian",
+    "protocol" : "tcp",
+    "port" : 486
+  },
+  {
+    "name" : "saft",
+    "protocol" : "tcp",
+    "port" : 487
+  },
+  {
+    "name" : "gss-http",
+    "protocol" : "tcp",
+    "port" : 488
+  },
+  {
+    "name" : "nest-protocol",
+    "protocol" : "tcp",
+    "port" : 489
+  },
+  {
+    "name" : "micom-pfs",
+    "protocol" : "tcp",
+    "port" : 490
+  },
+  {
+    "name" : "go-login",
+    "protocol" : "tcp",
+    "port" : 491
+  },
+  {
+    "name" : "ticf-1",
+    "protocol" : "tcp",
+    "port" : 492
+  },
+  {
+    "name" : "ticf-2",
+    "protocol" : "tcp",
+    "port" : 493
+  },
+  {
+    "name" : "pov-ray",
+    "protocol" : "tcp",
+    "port" : 494
+  },
+  {
+    "name" : "intecourier",
+    "protocol" : "tcp",
+    "port" : 495
+  },
+  {
+    "name" : "pim-rp-disc",
+    "protocol" : "tcp",
+    "port" : 496
+  },
+  {
+    "name" : "dantz",
+    "protocol" : "tcp",
+    "port" : 497
+  },
+  {
+    "name" : "siam",
+    "protocol" : "tcp",
+    "port" : 498
+  },
+  {
+    "name" : "iso-ill",
+    "protocol" : "tcp",
+    "port" : 499
+  },
+  {
+    "name" : "isakmp",
+    "protocol" : "tcp",
+    "port" : 500
+  }
+]

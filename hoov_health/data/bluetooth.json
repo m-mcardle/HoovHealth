@@ -1,0 +1,52 @@
+{
+  "device_connected" : [
+    {
+      "Keyboard" : {
+        "device_address" : "F1:33:5E:8C:98:7E",
+        "device_firmwareVersion" : "abs.123",
+        "device_batteryLevelMain" : "100%",
+        "device_vendorID" : "0x046A",
+        "device_minorType" : "Keyboard",
+        "device_productID" : "0xB34A",
+        "device_services" : "0x400000 < BLE >"
+      }
+    },
+    {
+      "Mouse" : {
+        "device_address" : "WF:4B:91:94:C0:1B",
+        "device_firmwareVersion" : "abc.123",
+        "device_batteryLevelMain" : "69%",
+        "device_vendorID" : "0x046A",
+        "device_minorType" : "Mouse",
+        "device_productID" : "0xA015",
+        "device_services" : "0x400000 < BLE >"
+      }
+    }
+  ],
+  "device_not_connected" : [
+    {
+      "Sex Toy" : {
+        "device_caseVersion" : "3.3.0",
+        "device_productID" : "0x3014",
+        "device_address" : "C4:35:D3:2C:D5:B3",
+        "device_firmwareVersion" : "3F7",
+        "device_serialNumber" : "F230D9WGYQ",
+        "device_minorType" : "Vibrator",
+        "device_vendorID" : "0x003C",
+        "device_serialNumberRight" : "GX3JN5F618JP",
+        "device_serialNumberLeft" : "GWHJJ64D13JQ"
+      }
+    }
+  ],
+  "controller_properties" : {
+    "controller_chipset" : "ABC_4387",
+    "controller_discoverable" : "attrib_off",
+    "controller_productID" : "0x3A09",
+    "controller_state" : "attrib_on",
+    "controller_transport" : "PCIe",
+    "controller_vendorID" : "0x004C (Apple)",
+    "controller_firmwareVersion" : "22.5.581.1925",
+    "controller_address" : "AF:C9:06:0F:36:E4",
+    "controller_supportedServices" : "0x492039 < HFP AVRCP A2DP HID Braille LEA AACP GATT SerialPort >"
+  }
+}
