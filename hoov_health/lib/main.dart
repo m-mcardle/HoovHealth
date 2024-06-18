@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 void main() {
   runApp(const MyApp());
@@ -132,8 +133,40 @@ class _MyHomePageState extends State<MyHomePage> {
                           Text(
                             'Total Stink Score',
                           ),
-                          Text(
-                            'This is where the health score will go',
+                          Flexible(
+                            child: SfRadialGauge(
+                              // set size to be 200x200
+                              axes: <RadialAxis>[
+                                RadialAxis(
+                                  startAngle: 270,
+                                  radiusFactor: 0.75,
+                                  endAngle: 270,
+                                  minimum: 0,
+                                  maximum: 100,
+                                  axisLineStyle: AxisLineStyle(
+                                    thickness: 0,
+                                  ),
+                                  ranges: <GaugeRange>[
+                                    GaugeRange(startValue: 69, endValue: 100, color: Colors.red[200], startWidth: 20, endWidth: 20,),
+                                    GaugeRange(startValue: 0, endValue: 69, color:Colors.red, startWidth: 20, endWidth: 20,),
+                                  ],
+                                  annotations: <GaugeAnnotation>[
+                                    GaugeAnnotation(
+                                      widget: Container(
+                                        child: Text(
+                                          '69%',
+                                          style: TextStyle(fontSize: 32,fontWeight: FontWeight.w900, color: Colors.red)
+                                        )
+                                      ),
+                                      angle: 69,
+                                      positionFactor: 0
+                                    )
+                                  ],
+                                  showLabels: false,
+                                  interval: 100,
+                                )
+                              ]
+                            )
                           ),
                         ],
                       ),
@@ -158,10 +191,42 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.white,
                           ),
                           Text(
-                            'Bluetooth',
+                            'Bluetooth Health',
                           ),
-                          Text(
-                            'This is where the bluetooth widget will go',
+                          Flexible(
+                            child: SfRadialGauge(
+                              // set size to be 200x200
+                              axes: <RadialAxis>[
+                                RadialAxis(
+                                  startAngle: 150,
+                                  radiusFactor: 0.75,
+                                  endAngle: 30,
+                                  minimum: 0,
+                                  maximum: 100,
+                                  axisLineStyle: AxisLineStyle(
+                                    thickness: 0,
+                                  ),
+                                  ranges: <GaugeRange>[
+                                    GaugeRange(startValue: 45, endValue: 100, color: Colors.grey[400]),
+                                    GaugeRange(startValue: 0, endValue: 45, color:Colors.white),
+                                  ],
+                                  annotations: <GaugeAnnotation>[
+                                    GaugeAnnotation(
+                                      widget: Container(
+                                        child: Text(
+                                          '45%',
+                                          style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)
+                                        )
+                                      ),
+                                      angle: 90,
+                                      positionFactor: 0
+                                    )
+                                  ],
+                                  showLabels: false,
+                                  interval: 100,
+                                )
+                              ]
+                            )
                           ),
                         ],
                       ),
@@ -171,7 +236,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Expanded(
                     child: Container(
                       height: 200,
-                      color: Colors.orange[200],
+                      color: Colors.orange[300],
                       child: Column(
                         children: [
                           const Icon(
@@ -182,8 +247,40 @@ class _MyHomePageState extends State<MyHomePage> {
                           Text(
                             'WiFi Health',
                           ),
-                          Text(
-                            'This is where the bluetooth widget will go',
+                          Flexible(
+                            child: SfRadialGauge(
+                              // set size to be 200x200
+                              axes: <RadialAxis>[
+                                RadialAxis(
+                                  startAngle: 150,
+                                  radiusFactor: 0.75,
+                                  endAngle: 30,
+                                  minimum: 0,
+                                  maximum: 100,
+                                  axisLineStyle: AxisLineStyle(
+                                    thickness: 0,
+                                  ),
+                                  ranges: <GaugeRange>[
+                                    GaugeRange(startValue: 45, endValue: 100, color: Colors.grey[400]),
+                                    GaugeRange(startValue: 0, endValue: 45, color:Colors.white),
+                                  ],
+                                  annotations: <GaugeAnnotation>[
+                                    GaugeAnnotation(
+                                      widget: Container(
+                                        child: Text(
+                                          '45%',
+                                          style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)
+                                        )
+                                      ),
+                                      angle: 90,
+                                      positionFactor: 0
+                                    )
+                                  ],
+                                  showLabels: false,
+                                  interval: 100,
+                                )
+                              ]
+                            )
                           ),
                         ],
                       ),
@@ -196,11 +293,48 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.green[200],
                       child: Column(
                         children: [
-                          Text(
-                            'Bluetooth',
+                          const Icon(
+                            Icons.computer,
+                            size: 32,
+                            color: Colors.white,
                           ),
                           Text(
-                            'This is where the bluetooth widget will go',
+                            'System Health',
+                          ),
+                          Flexible(
+                            child: SfRadialGauge(
+                              // set size to be 200x200
+                              axes: <RadialAxis>[
+                                RadialAxis(
+                                  startAngle: 150,
+                                  radiusFactor: 0.75,
+                                  endAngle: 30,
+                                  minimum: 0,
+                                  maximum: 100,
+                                  axisLineStyle: AxisLineStyle(
+                                    thickness: 0,
+                                  ),
+                                  ranges: <GaugeRange>[
+                                    GaugeRange(startValue: 45, endValue: 100, color: Colors.grey[400]),
+                                    GaugeRange(startValue: 0, endValue: 45, color:Colors.white),
+                                  ],
+                                  annotations: <GaugeAnnotation>[
+                                    GaugeAnnotation(
+                                      widget: Container(
+                                        child: Text(
+                                          '45%',
+                                          style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)
+                                        )
+                                      ),
+                                      angle: 90,
+                                      positionFactor: 0
+                                    )
+                                  ],
+                                  showLabels: false,
+                                  interval: 100,
+                                )
+                              ]
+                            )
                           ),
                         ],
                       ),
@@ -213,11 +347,48 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.purple[200],
                       child: Column(
                         children: [
-                          Text(
-                            'Bluetooth',
+                          const Icon(
+                            Icons.settings_outlined,
+                            size: 32,
+                            color: Colors.white,
                           ),
                           Text(
-                            'This is where the bluetooth widget will go',
+                            'Other Health',
+                          ),
+                          Flexible(
+                            child: SfRadialGauge(
+                              // set size to be 200x200
+                              axes: <RadialAxis>[
+                                RadialAxis(
+                                  startAngle: 150,
+                                  radiusFactor: 0.75,
+                                  endAngle: 30,
+                                  minimum: 0,
+                                  maximum: 100,
+                                  axisLineStyle: AxisLineStyle(
+                                    thickness: 0,
+                                  ),
+                                  ranges: <GaugeRange>[
+                                    GaugeRange(startValue: 45, endValue: 100, color: Colors.grey[400]),
+                                    GaugeRange(startValue: 0, endValue: 45, color:Colors.white),
+                                  ],
+                                  annotations: <GaugeAnnotation>[
+                                    GaugeAnnotation(
+                                      widget: Container(
+                                        child: Text(
+                                          '45%',
+                                          style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)
+                                        )
+                                      ),
+                                      angle: 90,
+                                      positionFactor: 0
+                                    )
+                                  ],
+                                  showLabels: false,
+                                  interval: 100,
+                                )
+                              ]
+                            )
                           ),
                         ],
                       ),
