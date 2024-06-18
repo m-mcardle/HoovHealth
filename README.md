@@ -9,6 +9,9 @@ Available Scans:
 - Processes
 - Ports
 
+Current Health Scores:
+- N/A
+
 Scans I want
 - Process run on startup
 - User sessions
