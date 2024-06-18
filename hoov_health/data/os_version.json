@@ -1,0 +1,10 @@
+{
+  "build" : "23F79",
+  "arch" : "arm64",
+  "minor" : 5,
+  "major" : 14,
+  "platform" : "darwin",
+  "version" : "14.5",
+  "platform_like" : "darwin",
+  "name" : "macOS"
+}

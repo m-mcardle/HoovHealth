@@ -1,0 +1,262 @@
+[
+  {
+    "pid" : 368,
+    "bundle_identifier" : "com.apple.loginwindow",
+    "is_active" : false
+  },
+  {
+    "pid" : 561,
+    "bundle_identifier" : "",
+    "is_active" : false
+  },
+  {
+    "pid" : 571,
+    "bundle_identifier" : "com.apple.WindowManager",
+    "is_active" : false
+  },
+  {
+    "pid" : 585,
+    "bundle_identifier" : "com.apple.talagent",
+    "is_active" : false
+  },
+  {
+    "pid" : 617,
+    "bundle_identifier" : "com.microsoft.VSCode",
+    "is_active" : true
+  },
+  {
+    "pid" : 619,
+    "bundle_identifier" : "com.apple.MobileSMS",
+    "is_active" : false
+  },
+  {
+    "pid" : 624,
+    "bundle_identifier" : "com.apple.Terminal",
+    "is_active" : false
+  },
+  {
+    "pid" : 630,
+    "bundle_identifier" : "com.apple.ActivityMonitor",
+    "is_active" : false
+  },
+  {
+    "pid" : 615,
+    "bundle_identifier" : "com.apple.notificationcenterui",
+    "is_active" : false
+  },
+  {
+    "pid" : 634,
+    "bundle_identifier" : "com.utmapp.UTM",
+    "is_active" : false
+  },
+  {
+    "pid" : 637,
+    "bundle_identifier" : "com.apple.Notes",
+    "is_active" : false
+  },
+  {
+    "pid" : 638,
+    "bundle_identifier" : "com.apple.stocks",
+    "is_active" : false
+  },
+  {
+    "pid" : 650,
+    "bundle_identifier" : "com.apple.Music",
+    "is_active" : false
+  },
+  {
+    "pid" : 651,
+    "bundle_identifier" : "com.apple.dock",
+    "is_active" : false
+  },
+  {
+    "pid" : 640,
+    "bundle_identifier" : "com.apple.PowerChime",
+    "is_active" : false
+  },
+  {
+    "pid" : 654,
+    "bundle_identifier" : "com.apple.systemuiserver",
+    "is_active" : false
+  },
+  {
+    "pid" : 659,
+    "bundle_identifier" : "com.apple.wallpaper.agent",
+    "is_active" : false
+  },
+  {
+    "pid" : 655,
+    "bundle_identifier" : "com.apple.finder",
+    "is_active" : false
+  },
+  {
+    "pid" : 668,
+    "bundle_identifier" : "com.apple.ViewBridgeAuxiliary",
+    "is_active" : false
+  },
+  {
+    "pid" : 707,
+    "bundle_identifier" : "com.apple.wifi.WiFiAgent",
+    "is_active" : false
+  },
+  {
+    "pid" : 728,
+    "bundle_identifier" : "com.apple.UIKitSystemApp",
+    "is_active" : false
+  },
+  {
+    "pid" : 733,
+    "bundle_identifier" : "com.apple.Spotlight",
+    "is_active" : false
+  },
+  {
+    "pid" : 754,
+    "bundle_identifier" : "com.apple.dock.extra",
+    "is_active" : false
+  },
+  {
+    "pid" : 644,
+    "bundle_identifier" : "",
+    "is_active" : false
+  },
+  {
+    "pid" : 820,
+    "bundle_identifier" : "com.apple.TextInputUI.xpc.CursorUIViewService",
+    "is_active" : false
+  },
+  {
+    "pid" : 822,
+    "bundle_identifier" : "com.apple.PressAndHold",
+    "is_active" : false
+  },
+  {
+    "pid" : -1,
+    "bundle_identifier" : "com.apple.Family",
+    "is_active" : false
+  },
+  {
+    "pid" : 909,
+    "bundle_identifier" : "com.spotify.client",
+    "is_active" : false
+  },
+  {
+    "pid" : 1472,
+    "bundle_identifier" : "com.apple.AirPlayUIAgent",
+    "is_active" : false
+  },
+  {
+    "pid" : 1474,
+    "bundle_identifier" : "com.apple.TextInputMenuAgent",
+    "is_active" : false
+  },
+  {
+    "pid" : 79508,
+    "bundle_identifier" : "com.microsoft.Outlook",
+    "is_active" : false
+  },
+  {
+    "pid" : 79529,
+    "bundle_identifier" : "com.apple.WebKit.Networking",
+    "is_active" : false
+  },
+  {
+    "pid" : 83789,
+    "bundle_identifier" : "com.apple.UserNotificationCenter",
+    "is_active" : false
+  },
+  {
+    "pid" : 736,
+    "bundle_identifier" : "com.apple.avconferenced",
+    "is_active" : false
+  },
+  {
+    "pid" : 85071,
+    "bundle_identifier" : "com.microsoft.teams",
+    "is_active" : false
+  },
+  {
+    "pid" : 85157,
+    "bundle_identifier" : "com.microsoft.teams.helper",
+    "is_active" : false
+  },
+  {
+    "pid" : 85716,
+    "bundle_identifier" : "com.apple.WebKit.GPU",
+    "is_active" : false
+  },
+  {
+    "pid" : 85723,
+    "bundle_identifier" : "com.apple.accessibility.universalAccessAuthWarn",
+    "is_active" : false
+  },
+  {
+    "pid" : 87450,
+    "bundle_identifier" : "com.google.Chrome",
+    "is_active" : false
+  },
+  {
+    "pid" : 87842,
+    "bundle_identifier" : "com.google.Chrome.helper.plugin",
+    "is_active" : false
+  },
+  {
+    "pid" : 93438,
+    "bundle_identifier" : "com.apple.chronod",
+    "is_active" : false
+  },
+  {
+    "pid" : 95036,
+    "bundle_identifier" : "com.apple.Siri",
+    "is_active" : false
+  },
+  {
+    "pid" : 95074,
+    "bundle_identifier" : "com.apple.SiriNCService",
+    "is_active" : false
+  },
+  {
+    "pid" : 98491,
+    "bundle_identifier" : "com.apple.controlcenter",
+    "is_active" : false
+  },
+  {
+    "pid" : 98620,
+    "bundle_identifier" : "com.apple.security.Keychain-Circle-Notification",
+    "is_active" : false
+  },
+  {
+    "pid" : 98623,
+    "bundle_identifier" : "com.apple.universalcontrol",
+    "is_active" : false
+  },
+  {
+    "pid" : 98702,
+    "bundle_identifier" : "com.apple.coreservices.uiagent",
+    "is_active" : false
+  },
+  {
+    "pid" : 98705,
+    "bundle_identifier" : "com.brave.Browser",
+    "is_active" : false
+  },
+  {
+    "pid" : 98722,
+    "bundle_identifier" : "com.apple.CoreLocationAgent",
+    "is_active" : false
+  },
+  {
+    "pid" : 98751,
+    "bundle_identifier" : "com.brave.Browser.helper.plugin",
+    "is_active" : false
+  },
+  {
+    "pid" : 98817,
+    "bundle_identifier" : "com.apple.AppSSOAgent",
+    "is_active" : false
+  },
+  {
+    "pid" : 98820,
+    "bundle_identifier" : "",
+    "is_active" : false
+  }
+]
