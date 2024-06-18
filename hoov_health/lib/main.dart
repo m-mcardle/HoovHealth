@@ -114,11 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Text(
                             'Summary Timeline',
-                            style: Theme.of(context).textTheme.headline6,
                           ),
                           Text(
                             'This is where the summary timeline will go',
-                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -133,11 +131,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Text(
                             'Total Stink Score',
-                            style: Theme.of(context).textTheme.headline6,
                           ),
                           Text(
                             'This is where the health score will go',
-                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -156,13 +152,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.lightBlue[300],
                       child: Column(
                         children: [
+                          const Icon(
+                            Icons.bluetooth_audio_rounded,
+                            size: 32,
+                            color: Colors.white,
+                          ),
                           Text(
                             'Bluetooth',
-                            style: Theme.of(context).textTheme.headline6,
                           ),
                           Text(
                             'This is where the bluetooth widget will go',
-                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -175,13 +174,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.orange[200],
                       child: Column(
                         children: [
+                          const Icon(
+                            Icons.wifi,
+                            size: 32,
+                            color: Colors.white,
+                          ),
                           Text(
-                            'BT Health',
-                            style: Theme.of(context).textTheme.headline6,
+                            'WiFi Health',
                           ),
                           Text(
                             'This is where the bluetooth widget will go',
-                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -196,11 +198,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Text(
                             'Bluetooth',
-                            style: Theme.of(context).textTheme.headline6,
                           ),
                           Text(
                             'This is where the bluetooth widget will go',
-                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -215,11 +215,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Text(
                             'Bluetooth',
-                            style: Theme.of(context).textTheme.headline6,
                           ),
                           Text(
                             'This is where the bluetooth widget will go',
-                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
