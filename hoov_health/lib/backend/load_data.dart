@@ -2,52 +2,65 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
+import 'package:hoov_health/backend/os.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'bluetooth.dart';
 
 class MetricsModel extends ChangeNotifier {
   BluetoothData? bluetoothData;
-  Map<MetricType, Metric> _metricsMap = {
-    MetricType.overallHealth: Metric(
-      type: MetricType.overallHealth,
-      title: 'Overall Health',
-      mainColor: Colors.red,
-      secondaryColor: Colors.red[200]!,
-      score: 69,
-    ),
+  OperatingSystemData? osVersion;
+
+  Metric overallHealth = Metric(
+    type: MetricType.overallHealth,
+    title: 'Overall Health',
+    icon: Icons.favorite,
+    mainColor: Colors.red,
+    secondaryColor: Colors.red[200]!,
+    score: 69,
+    page_url: '/overallHealth',
+  );
+  Map<MetricType, Metric> metricsMap = {
     MetricType.bluetoothHealth: Metric(
       type: MetricType.bluetoothHealth,
       title: 'Bluetooth Health',
-      mainColor: Colors.blue,
-      secondaryColor: Colors.blue[200]!,
+      icon: Icons.bluetooth,
+      mainColor: Color.fromARGB(255, 123, 212, 234),
+      secondaryColor: Color.fromARGB(255, 123, 212, 234),
       score: 69,
+      page_url: '/bluetoothHealth',
     ),
     MetricType.wifiHealth: Metric(
       type: MetricType.wifiHealth,
       title: 'Wifi Health',
-      mainColor: Colors.green,
-      secondaryColor: Colors.green[200]!,
+      icon: Icons.wifi,
+      mainColor: Color.fromARGB(255, 161, 238, 189),
+      secondaryColor: Color.fromARGB(255, 161, 238, 189),
       score: 69,
+      page_url: '/wifiHealth',
     ),
     MetricType.systemHealth: Metric(
       type: MetricType.systemHealth,
       title: 'System Health',
-      mainColor: Colors.orange,
-      secondaryColor: Colors.orange[200]!,
+      icon: Icons.computer,
+      mainColor: Color.fromARGB(255, 255, 208, 150),
+      secondaryColor: Color.fromARGB(255, 255, 208, 150),
       score: 69,
+      page_url: '/systemHealth',
     ),
     MetricType.otherHealth: Metric(
       type: MetricType.otherHealth,
       title: 'Other Health',
-      mainColor: Colors.purple,
-      secondaryColor: Colors.purple[200]!,
+      icon: Icons.devices_other,
+      mainColor: Color.fromARGB(255, 190, 173, 250),
+      secondaryColor: Color.fromARGB(255, 190, 173, 250),
       score: 69,
+      page_url: '/otherHealth',
     ),
   };
 
   // void updateMetric(Metric metric) {
-  //   _metricsMap[metric.type] = metric;
+  //   metricsMap[metric.type] = metric;
   //   notifyListeners();
 
   //   var filename = 'unknown.json';
@@ -77,7 +90,7 @@ class MetricsModel extends ChangeNotifier {
 
   Map<String, dynamic> toJson() {
     return {
-      'metrics': _metricsMap.values.map((metric) => {
+      'metrics': metricsMap.values.map((metric) => {
         'type': metric.type,
         'title': metric.title,
         'mainColor': metric.mainColor,
@@ -91,12 +104,14 @@ class MetricsModel extends ChangeNotifier {
     var metricsList = (json['metrics'] as List).map<Metric>((metric) => Metric(
       type: metric['type'],
       title: metric['title'],
+      icon: metricIcons[metric['type']]!,
       mainColor: metric['mainColor'],
       secondaryColor: metric['secondaryColor'],
       score: metric['score'],
+      page_url: metricPageUrls[metric['type']]!,
     )).toList();
 
-    _metricsMap = Map.fromIterable(
+    metricsMap = Map.fromIterable(
       metricsList,
       key: (metric) => MetricType.values.firstWhere((type) => type == metric.type),
       value: (metric) => metric,
@@ -165,18 +180,38 @@ enum MetricType {
   otherHealth,
 }
 
+const Map<MetricType, IconData> metricIcons = {
+  MetricType.overallHealth: Icons.favorite,
+  MetricType.bluetoothHealth: Icons.bluetooth,
+  MetricType.wifiHealth: Icons.wifi,
+  MetricType.systemHealth: Icons.computer,
+  MetricType.otherHealth: Icons.devices_other,
+};
+
+const Map<MetricType, String> metricPageUrls = {
+  MetricType.overallHealth: '/overallHealth',
+  MetricType.bluetoothHealth: '/bluetoothHealth',
+  MetricType.wifiHealth: '/wifiHealth',
+  MetricType.systemHealth: '/systemHealth',
+  MetricType.otherHealth: '/otherHealth',
+};
+
 class Metric {
   final MetricType type;
   final String title;
+  final IconData icon;
   final Color mainColor;
   final Color secondaryColor;
   final int score;
+  final String page_url;
 
   Metric({
     required this.type,
     required this.title,
+    required this.icon,
     required this.mainColor,
     required this.secondaryColor,
     required this.score,
+    required this.page_url
   });
 }

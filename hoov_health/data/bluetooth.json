@@ -21,6 +21,50 @@
         "device_productID" : "0xA015",
         "device_services" : "0x400000 < BLE >"
       }
+    },
+    {
+      "Mouse2" : {
+        "device_address" : "WF:4B:91:94:C0:1B",
+        "device_firmwareVersion" : "abc.123",
+        "device_batteryLevelMain" : "69%",
+        "device_vendorID" : "0x046A",
+        "device_minorType" : "Mouse",
+        "device_productID" : "0xA015",
+        "device_services" : "0x400000 < BLE >"
+      }
+    },
+    {
+      "Mouse3" : {
+        "device_address" : "WF:4B:91:94:C0:1B",
+        "device_firmwareVersion" : "abc.123",
+        "device_batteryLevelMain" : "69%",
+        "device_vendorID" : "0x046A",
+        "device_minorType" : "Mouse",
+        "device_productID" : "0xA015",
+        "device_services" : "0x400000 < BLE >"
+      }
+    },
+    {
+      "Mouse4" : {
+        "device_address" : "WF:4B:91:94:C0:1B",
+        "device_firmwareVersion" : "abc.123",
+        "device_batteryLevelMain" : "69%",
+        "device_vendorID" : "0x046A",
+        "device_minorType" : "Mouse",
+        "device_productID" : "0xA015",
+        "device_services" : "0x400000 < BLE >"
+      }
+    },
+    {
+      "Mouse5" : {
+        "device_address" : "WF:4B:91:94:C0:1B",
+        "device_firmwareVersion" : "abc.123",
+        "device_batteryLevelMain" : "69%",
+        "device_vendorID" : "0x046A",
+        "device_minorType" : "Mouse",
+        "device_productID" : "0xA015",
+        "device_services" : "0x400000 < BLE >"
+      }
     }
   ],
   "device_not_connected" : [
