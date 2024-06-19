@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:hoov_health/bluetooth/bluetooth_page.dart';
+import 'package:provider/provider.dart';
 
 import 'dashboard_sidebar.dart';
 import 'dashboard.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'backend/bluetooth.dart';
+import 'backend/load_data.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Ensure the binding is initialized
+  Map<String, dynamic> bluetoothJson = await loadBluetoothJson();
+  BluetoothData bluetoothData = BluetoothData.fromJson(bluetoothJson);
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => MetricsModel(bluetoothData: bluetoothData),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -40,7 +54,11 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'HoovHealth'),
+      initialRoute: '/', // Change the initial route to the startup page
+      routes: {
+        '/': (context) => MyHomePage(title: 'HoovHealth'),
+        '/bluetooth': (context) => BluetoothPage(),
+      },
     );
   }
 }
