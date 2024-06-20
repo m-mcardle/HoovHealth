@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hoov_health/backend/bluetooth.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -6,6 +7,7 @@ import 'dashboard/overall_health_widget.dart';
 import 'dashboard/metric_health_widget.dart';
 
 import 'backend/load_data.dart';
+import 'backend/tips.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -28,7 +30,8 @@ class _DashboardState extends State<Dashboard> {
 
     return Consumer<MetricsModel>(
         builder: (context, metricsModel, child) {
-          var metricsMap = metricsModel.metricsMap;
+          Map<MetricType, Metric> metricsMap = metricsModel.metricsMap;
+          BluetoothData? bluetoothData = metricsModel.bluetoothData;
 
           return Padding(
             padding: const EdgeInsets.all(16.0),
@@ -68,7 +71,7 @@ class _DashboardState extends State<Dashboard> {
                       ),
                     ),
                     const SizedBox(width: 32),
-                    Expanded(
+                    const Expanded(
                       child: OverallHealthWidget(
                         score: 69,
                       )
@@ -98,95 +101,38 @@ class _DashboardState extends State<Dashboard> {
                 // Row with recommendations
                 Row(
                   children: [
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        color: Colors.greenAccent[100],
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Primary Recommendation',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.normal,
-                                color: Colors.black,
+                    for (var tip in bluetoothData!.generateTips().getRange(0, 3)) ...[
+                      Expanded(
+                        child: Container(
+                          height: 100,
+                          color: tip.severity == Severity.Low ? Colors.green : tip.severity == Severity.Medium ? Colors.orange : Colors.red,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "${tip.severity.toString().split('.').last} Severity",
+                                style: const TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.black,
+                                ),
                               ),
-                            ),
-                            SizedBox(height: 16),
-                            Text(
-                              'Touch Grass',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
-                                color: Colors.black,
+                              const SizedBox(height: 16),
+                              Text(
+                                tip.tip,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.black,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(width: 32),
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        color: Colors.grey[300],
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Secondary Recommendation',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.normal,
-                                color: Colors.black,
-                              ),
-                            ),
-                            SizedBox(height: 16),
-                            Text(
-                              'Speak with a humanoid',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 32),
-                    Expanded(
-                      child: Container(
-                        height: 100,
-                        color: Colors.grey[300],
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'IDK, something else',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.normal,
-                                color: Colors.black,
-                              ),
-                            ),
-                            SizedBox(height: 16),
-                            Text(
-                              'Gamble?',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                      const SizedBox(width: 32),
+                    ]
                   ],
                 ),
               ],

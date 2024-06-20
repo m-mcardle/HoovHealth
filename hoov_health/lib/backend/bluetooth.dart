@@ -3,6 +3,9 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
 import 'dart:convert';
 
+import 'load_data.dart';
+import 'tips.dart';
+
 class BluetoothDevice {
   String name = "";
   String device_address = "";
@@ -79,6 +82,8 @@ class BluetoothData {
   List<BluetoothDevice> disconnectedDevices = [];
   ControllerProperties? controllerProperties;
 
+  List<String> approvedDeviceIDs = [];
+
   BluetoothData({
     required this.connectedDevices,
     required this.disconnectedDevices,
@@ -89,6 +94,35 @@ class BluetoothData {
     connectedDevices = (json['device_connected'] as List).map((e) => BluetoothDevice.fromJson(e)).toList();
     disconnectedDevices = (json['device_not_connected'] as List).map((e) => BluetoothDevice.fromJson(e)).toList();
     controllerProperties = ControllerProperties.fromJson(json['controller_properties']);
+  }
+
+  List<Tip> generateTips() {
+    final tips = <Tip>[];
+    if (controllerProperties != null) {
+      if (controllerProperties!.controller_state == "attrib_off") {
+        tips.add(Tip(MetricType.bluetoothHealth, "Turn on Bluetooth", Severity.Low));
+      }
+      if (controllerProperties!.controller_discoverable == "attrib_on") {
+        tips.add(Tip(MetricType.bluetoothHealth, "Make device discoverable", Severity.Low));
+      }
+    }
+    if (connectedDevices.isNotEmpty) {
+      final lowBatteryDevices = connectedDevices.where((device) {
+        if (device.device_batteryLevelMain == null) {
+          return false;
+        }
+        int batteryLevel = int.parse(device.device_batteryLevelMain!.substring(0, device.device_batteryLevelMain!.length - 1));
+        return batteryLevel < 20;
+      });
+      for (var device in lowBatteryDevices) {
+        tips.add(Tip(MetricType.bluetoothHealth, "Low battery on Bluetooth device named '${device.name}'", Severity.Medium));
+      }
+    }
+    final unapprovedDevices = connectedDevices.where((BluetoothDevice element) => !approvedDeviceIDs.contains(element.device_productID));
+    for (var device in unapprovedDevices) {
+      tips.add(Tip(MetricType.bluetoothHealth, "Unapproved device connected: ${device.name}", Severity.High));
+    }
+    return tips;
   }
 }
 
