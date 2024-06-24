@@ -33,7 +33,7 @@ class _MetricHealthWidgetState extends State<MetricHealthWidget> {
         borderRadius: BorderRadius.circular(10),
         color: isHover ? widget.color.withAlpha(200) : widget.color,
       ),
-      height: 300,
+      height: 200,
       child: InkWell( 
         onTap:(){
           Navigator.pushNamed(context, widget.page_url);

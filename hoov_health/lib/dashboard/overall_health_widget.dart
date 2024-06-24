@@ -12,7 +12,7 @@ class OverallHealthWidget extends StatelessWidget {
     final Color secondaryColor = Colors.red[200]!;
 
     return Container(
-      height: 320,
+      height: 200,
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
