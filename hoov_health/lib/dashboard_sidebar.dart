@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/network.dart';
 
 class DashboardSidebar extends StatelessWidget {
   const DashboardSidebar({super.key});
@@ -43,18 +44,26 @@ class DashboardSidebar extends StatelessWidget {
               )
             ),
             SizedBox(height: 8),
-            Container(
-              width: 180,
-              height: 40,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Network()),
+                );
+              },
+              child: Container(
+                width: 180,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Row(
+                  children: [
+                    Icon(Icons.wifi, color: Colors.grey),
+                    Expanded(child: Text('Network Scan', textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.grey))),
+                  ],
+                ),
               ),
-              child: const Row(
-                children: [
-                  Icon(Icons.wifi, color: Colors.grey),
-                  Expanded(child: Text('WiFi Health', textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.grey))),
-                ],
-              )
             ),
             SizedBox(height: 8),
             Container(

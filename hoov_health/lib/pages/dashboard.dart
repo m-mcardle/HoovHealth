@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:network_info_plus/network_info_plus.dart'; // Import network_info_plus package
 
-import 'dashboard/overall_health_widget.dart';
-import 'dashboard/metric_health_widget.dart';
-import 'backend/load_data.dart';
+import '../dashboard/overall_health_widget.dart';
+import '../dashboard/metric_health_widget.dart';
+import '../backend/load_data.dart';
+import '../scans/wifi.dart'; // Import the WiFi scan function from scans/wifi.dart
+import '../scans/system.dart'; // Import the System scan function from scans/system.dart
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -66,37 +67,6 @@ class _DashboardState extends State<Dashboard> {
         }
       });
     }
-  }
-
-  Future<Map<String, String>> getWifiInfo() async {
-    final info = NetworkInfo();
-    String ssid = await info.getWifiName() ?? 'Not connected';
-    String ip = await info.getWifiIP() ?? 'Unknown';
-    String bssid = await info.getWifiBSSID() ?? 'Unknown';
-    String ipv6 = await info.getWifiIPv6() ?? 'Unknown';
-    String wifiSubmask = await info.getWifiSubmask() ?? 'Unknown';
-    String wifiBroadcast = await info.getWifiBroadcast() ?? 'Unknown';
-    String wifiGateway = await info.getWifiGatewayIP() ?? 'Unknown';
-
-    return {
-      'SSID': ssid,
-      'IP': ip,
-      'BSSID': bssid,
-      'IPv6': ipv6,
-      'Submask': wifiSubmask,
-      'Broadcast': wifiBroadcast,
-      'Gateway': wifiGateway,
-    };
-  }
-
-  Future<Map<String, String>> getSystemInfo() async {
-    // Replace with actual implementation to retrieve system info for Mac
-    return {
-      'OS': 'macOS',
-      'Version': 'Big Sur',
-      'Hostname': 'MyMac',
-      'Serial Number': 'ABCDEFG123456',
-    };
   }
 
   @override
@@ -227,14 +197,23 @@ class _DashboardState extends State<Dashboard> {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    ListView(
-                      shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
-                      children: wifiScanResult.entries
-                          .map((entry) => ListTile(
-                                title: Text('${entry.key}: ${entry.value}'),
-                              ))
-                          .toList(),
+                    Container(
+                      height: 250, // Fixed height for the container
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: SingleChildScrollView(
+                        child: ListView(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          children: wifiScanResult.entries
+                              .map((entry) => ListTile(
+                                    title: Text('${entry.key}: ${entry.value}'),
+                                  ))
+                              .toList(),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -250,14 +229,23 @@ class _DashboardState extends State<Dashboard> {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    ListView(
-                      shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
-                      children: systemScanResult.entries
-                          .map((entry) => ListTile(
-                                title: Text('${entry.key}: ${entry.value}'),
-                              ))
-                          .toList(),
+                    Container(
+                      height: 250, // Fixed height for the container
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: SingleChildScrollView(
+                        child: ListView(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          children: systemScanResult.entries
+                              .map((entry) => ListTile(
+                                    title: Text('${entry.key}: ${entry.value}'),
+                                  ))
+                              .toList(),
+                        ),
+                      ),
                     ),
                   ],
                 ),

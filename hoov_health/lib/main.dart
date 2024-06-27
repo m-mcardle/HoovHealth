@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hoov_health/bluetooth/bluetooth_page.dart';
+import 'package:hoov_health/pages/bluetooth_page.dart';
 import 'package:provider/provider.dart';
 
 import 'dashboard_sidebar.dart';
-import 'dashboard.dart';
+import 'pages/dashboard.dart';
+import 'pages/network.dart';
+import 'pages/applications.dart';
 
 import 'backend/bluetooth.dart';
 import 'backend/load_data.dart';
@@ -42,9 +44,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => MyHomePage(title: 'HoovHealth'),
-        '/bluetoothHealth': (context) => BluetoothPage(),
-        // TODO
-        '/wifiHealth': (context) => MyHomePage(title: 'Wifi Health'),
+        '/dashboard': (context) => Dashboard(),
+        '/bluetooth': (context) => BluetoothPage(),
+        '/network': (context) => Network(),
+        '/applications': (context) => Apps(),
         '/systemHealth': (context) => MyHomePage(title: 'System Health'),
         '/otherHealth': (context) => MyHomePage(title: 'Other Health'),
         '/overallHealth': (context) => MyHomePage(title: 'Overall Health'),
@@ -72,12 +75,57 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.secondary,
         title: Text(widget.title),
       ),
+      drawer: Drawer(
+        backgroundColor: Color.fromARGB(255, 140, 3, 3),
+        child: Column(
+          children: [
+            DrawerHeader(
+              child: Icon(
+                Icons.security,
+                size: 48,
+              )
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.wifi,
+                size: 40,
+              ),
+              title: Text("N E T W O R K"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/network');
+              }
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.bluetooth,
+                size: 40,
+              ),
+              title: Text("B L U E T O O T H"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/bluetooth');
+              }
+            ),
+             ListTile(
+              leading: Icon(
+                Icons.app_shortcut,
+                size: 40,
+              ),
+              title: Text("A P P L I C A T I O N S"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/applications');
+              }
+            )
+          ],
+        )
+      ),
       body: SingleChildScrollView(
         child: Container(
           height: 900,
           child: const Row(
             children: [
-              DashboardSidebar(),
               SizedBox(width: 16),
               Expanded(
                 child: Dashboard(),
