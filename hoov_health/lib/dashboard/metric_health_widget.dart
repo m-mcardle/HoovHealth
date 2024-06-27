@@ -36,7 +36,7 @@ class _MetricHealthWidgetState extends State<MetricHealthWidget> {
       height: 300,
       child: InkWell( 
         onTap:(){
-          Navigator.pushNamed(context, widget.page_url);
+          Navigator.pushReplacementNamed(context, widget.page_url);
         },
         onHover: (val) {
           setState(() {
