@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'package:flutter/services.dart';
 
 class Network extends StatefulWidget {
   const Network({Key? key}) : super(key: key);
@@ -10,36 +9,24 @@ class Network extends StatefulWidget {
 }
 
 class _NetworkState extends State<Network> {
-  List<String> ipAddresses = [];
+  static const platform = MethodChannel('com.example.wifi_info');
+
+  Map<String, dynamic> wifiInfo = {};
 
   @override
   void initState() {
     super.initState();
-    fetchIPs();
+    fetchWifiInfo();
   }
 
-  Future<void> fetchIPs() async {
-    final String apiUrl = 'http://localhost:5001/get_ips';
-
+  Future<void> fetchWifiInfo() async {
     try {
-      final response = await http.get(
-        Uri.parse(apiUrl),
-        // Disable SSL verification (for testing only)
-        // headers: {'Accept': 'application/json', 'Connection': 'keep-alive'},
-        // verify: false,
-      );
-
-      if (response.statusCode == 200) {
-        final List<dynamic> devices = jsonDecode(response.body);
-        setState(() {
-          ipAddresses = devices.map((device) => device['ip'] as String).toList();
-        });
-      } else {
-        throw Exception('Failed to load IP addresses');
-      }
-    } catch (e) {
-      print('Error fetching IP addresses: $e');
-      // Handle error, such as displaying a message to the user
+      final result = await platform.invokeMethod<Map<dynamic, dynamic>>('getWifiInfo');
+      setState(() {
+        wifiInfo = result?.cast<String, dynamic>() ?? {}; // Explicit cast to Map<String, dynamic>
+      });
+    } on PlatformException catch (e) {
+      print("Failed to get Wi-Fi info: '${e.message}'.");
     }
   }
 
@@ -50,13 +37,45 @@ class _NetworkState extends State<Network> {
         title: const Text('Network Information'),
         backgroundColor: Colors.deepPurple,
       ),
-      body: ListView.builder(
-        itemCount: ipAddresses.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(ipAddresses[index]),
-          );
-        },
+      body: Container(
+        color: Colors.black,
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: fetchWifiInfo,
+              child: Text('Fetch Wi-Fi Info'),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.pink,
+                ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Wi-Fi Info:',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+            ),
+            SizedBox(height: 10),
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: DataTable(
+                  columnSpacing: 20,
+                  columns: [
+                    DataColumn(label: Text('Property', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white))),
+                    DataColumn(label: Text('Value', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white))),
+                  ],
+                  rows: wifiInfo.entries.map((entry) {
+                    return DataRow(cells: [
+                      DataCell(Text(entry.key, style: TextStyle(color: Colors.white))),
+                      DataCell(Text(entry.value.toString(), style: TextStyle(color: Colors.white))),
+                    ]);
+                  }).toList(),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
