@@ -4,7 +4,7 @@
       "Keyboard" : {
         "device_address" : "F1:33:5E:8C:98:7E",
         "device_firmwareVersion" : "abs.123",
-        "device_batteryLevelMain" : "100%",
+        "device_batteryLevelMain" : "10%",
         "device_vendorID" : "0x046A",
         "device_minorType" : "Keyboard",
         "device_productID" : "0xB34A",

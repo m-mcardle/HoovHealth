@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          height: 900,
+          height: 1200,
           child: const Row(
             children: [
               SizedBox(width: 16),
