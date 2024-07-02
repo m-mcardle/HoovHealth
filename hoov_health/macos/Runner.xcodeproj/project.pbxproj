@@ -31,6 +31,7 @@
 		642F79802C33591B00655197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC10F02044A3C60003C045 /* AppDelegate.swift */; };
 		642F79822C3359E200655197 /* WifiInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 642F79812C3359E200655197 /* WifiInfo.m */; };
 		642F79852C3363FE00655197 /* CoreWLAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F79842C3363FD00655197 /* CoreWLAN.framework */; };
+		642F79872C34AFCD00655197 /* system_info.m in Sources */ = {isa = PBXBuildFile; fileRef = 642F79862C34AFCD00655197 /* system_info.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		642F79812C3359E200655197 /* WifiInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiInfo.m; sourceTree = "<group>"; };
 		642F79832C335EF900655197 /* WifiInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiInfo.h; sourceTree = "<group>"; };
 		642F79842C3363FD00655197 /* CoreWLAN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreWLAN.framework; path = System/Library/Frameworks/CoreWLAN.framework; sourceTree = SDKROOT; };
+		642F79862C34AFCD00655197 /* system_info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = system_info.m; sourceTree = "<group>"; };
+		642F79882C34AFDE00655197 /* system_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = system_info.h; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		ED3624833B208D8D91A503B1 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 		33FAB671232836740065AC1E /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				642F79882C34AFDE00655197 /* system_info.h */,
+				642F79862C34AFCD00655197 /* system_info.m */,
 				642F79832C335EF900655197 /* WifiInfo.h */,
 				642F79812C3359E200655197 /* WifiInfo.m */,
 				33CC10F02044A3C60003C045 /* AppDelegate.swift */,
@@ -448,6 +453,7 @@
 				642F79822C3359E200655197 /* WifiInfo.m in Sources */,
 				642F79802C33591B00655197 /* AppDelegate.swift in Sources */,
 				33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */,
+				642F79872C34AFCD00655197 /* system_info.m in Sources */,
 				335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

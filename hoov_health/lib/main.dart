@@ -6,6 +6,7 @@ import 'dashboard_sidebar.dart';
 import 'pages/dashboard.dart';
 import 'pages/network.dart';
 import 'pages/applications.dart';
+import 'pages/system.dart';
 
 import 'backend/bluetooth.dart';
 import 'backend/load_data.dart';
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
         '/bluetooth': (context) => BluetoothPage(),
         '/network': (context) => Network(),
         '/applications': (context) => Apps(),
+        '/system': (context) => System(),
         '/systemHealth': (context) => MyHomePage(title: 'System Health'),
         '/otherHealth': (context) => MyHomePage(title: 'Other Health'),
         '/overallHealth': (context) => MyHomePage(title: 'Overall Health'),
@@ -107,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushNamed(context, '/bluetooth');
               }
             ),
-             ListTile(
+            ListTile(
               leading: Icon(
                 Icons.app_shortcut,
                 size: 40,
@@ -116,6 +118,17 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushNamed(context, '/applications');
+              }
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.system_update_rounded,
+                size: 40,
+              ),
+              title: Text("S Y S T E M"),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/system');
               }
             )
           ],
