@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sqflite/sqflite.dart';
 
 class Network extends StatefulWidget {
   const Network({Key? key}) : super(key: key);
@@ -16,14 +17,46 @@ class _NetworkState extends State<Network> {
   @override
   void initState() {
     super.initState();
-    fetchWifiInfo();
   }
 
   Future<void> fetchWifiInfo() async {
     try {
       final result = await platform.invokeMethod<Map<dynamic, dynamic>>('getWifiInfo');
+      final val = result?.cast<String, dynamic>() ?? {};
+
+      // open the database
+      Database database = await openDatabase('hoov_health.db', version: 1,
+          onCreate: (Database db, int version) async {
+            await db.execute('''
+              CREATE TABLE NetworkScan (
+                id INTEGER PRIMARY KEY,
+                channel_band INT,
+                channel_width INT,
+                channel INT,
+                security TEXT,
+                transmit_rate REAL,
+                noise_level INT,
+                rssi INT,
+                timestamp INTEGER
+              )
+            ''');
+          },
+      );
+
+      int currentTimestamp = DateTime.now().millisecondsSinceEpoch ~/ 1000; // Unix timestamp in seconds
+
+      await database.transaction((txn) async {
+        int id = await txn.rawInsert(
+            'INSERT INTO NetworkScan(channel_band, channel_width, channel, security, transmit_rate, noise_level, rssi, timestamp) VALUES(?, ?, ?, ?, ?, ?, ?, ?)',
+            [val['Channel_Band'], val['Channel_Width'], val['Channel'], val['Security'], val['Transmit_Rate'], val['Noise_Level'], val['RSSI'], currentTimestamp]);
+        print('inserted: $id');
+      });
+
+      List<Map> list = await database.rawQuery('SELECT * FROM NetworkScan');
+      print(list);
+
       setState(() {
-        wifiInfo = result?.cast<String, dynamic>() ?? {}; // Explicit cast to Map<String, dynamic>
+        wifiInfo = val;
       });
     } on PlatformException catch (e) {
       print("Failed to get Wi-Fi info: '${e.message}'.");
