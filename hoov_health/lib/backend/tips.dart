@@ -1,4 +1,4 @@
-import 'load_data.dart';
+import 'state.dart';
 
 enum Severity {
   Low,

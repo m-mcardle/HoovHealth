@@ -4,7 +4,7 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../dashboard/overall_health_widget.dart';
 import '../dashboard/metric_health_widget.dart';
-import '../backend/load_data.dart';
+import '../backend/state.dart';
 import '../scans/wifi.dart'; // Import the WiFi scan function from scans/wifi.dart
 import '../scans/system.dart'; // Import the System scan function from scans/system.dart
 
@@ -79,9 +79,9 @@ class _DashboardState extends State<Dashboard> {
       ChartData(5, 40),
     ];
 
-    return Consumer<MetricsModel>(
-      builder: (context, metricsModel, child) {
-        var metricsMap = metricsModel.metricsMap;
+    return Consumer<StateModel>(
+      builder: (context, stateModel, child) {
+        var metricsMap = stateModel.metricsMap;
 
         return Padding(
           padding: const EdgeInsets.all(16.0),

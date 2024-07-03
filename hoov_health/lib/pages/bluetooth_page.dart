@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../backend/load_data.dart';
+import '../backend/state.dart';
 import '../backend/bluetooth.dart';
 
 
@@ -22,9 +22,9 @@ class _BluetoothPageState extends State<BluetoothPage> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text("Bluetooth Devices"),
       ),
-      body: Consumer<MetricsModel>(
-        builder: (context, metricsModel, child) {
-          BluetoothData bluetoothData = metricsModel.bluetoothData!;
+      body: Consumer<StateModel>(
+        builder: (context, stateModel, child) {
+          BluetoothData bluetoothData = stateModel.bluetoothData!;
           List<BluetoothDevice> devices = bluetoothData.connectedDevices;
           List<BluetoothDevice> disconnectedDevices = bluetoothData.disconnectedDevices;
           ControllerProperties? controllerProperties = bluetoothData.controllerProperties!;

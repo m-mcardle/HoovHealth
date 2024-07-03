@@ -6,8 +6,10 @@ import 'package:hoov_health/backend/os.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'bluetooth.dart';
+import 'db/db.dart';
 
-class MetricsModel extends ChangeNotifier {
+class StateModel extends ChangeNotifier {
+  DatabaseHelper databaseHelper = DatabaseHelper.instance;
   BluetoothData? bluetoothData;
   OperatingSystemData? osVersion;
 
@@ -84,7 +86,7 @@ class MetricsModel extends ChangeNotifier {
   //   _saveMetricAsset(json.encode(toJson()), filename);
   // }
 
-  MetricsModel({
+  StateModel({
     required this.bluetoothData,
   });
 
@@ -100,7 +102,7 @@ class MetricsModel extends ChangeNotifier {
     };
   }
 
-  MetricsModel.fromJson(Map<String, dynamic> json) {
+  StateModel.fromJson(Map<String, dynamic> json) {
     var metricsList = (json['metrics'] as List).map<Metric>((metric) => Metric(
       type: metric['type'],
       title: metric['title'],

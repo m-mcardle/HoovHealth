@@ -3,7 +3,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
 import 'dart:convert';
 
-import 'load_data.dart';
+import 'state.dart';
 import 'tips.dart';
 
 class BluetoothDevice {

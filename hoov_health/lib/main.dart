@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:hoov_health/pages/bluetooth_page.dart';
 import 'package:provider/provider.dart';
 
-import 'dashboard_sidebar.dart';
 import 'pages/dashboard.dart';
 import 'pages/network.dart';
 import 'pages/applications.dart';
 import 'pages/system.dart';
 
 import 'backend/bluetooth.dart';
-import 'backend/load_data.dart';
+import 'backend/state.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Ensure the binding is initialized
@@ -18,7 +17,7 @@ void main() async {
 
   runApp(
     ChangeNotifierProvider(
-      create: (context) => MetricsModel(bluetoothData: bluetoothData),
+      create: (context) => StateModel(bluetoothData: bluetoothData),
       child: MyApp(),
     ),
   );
