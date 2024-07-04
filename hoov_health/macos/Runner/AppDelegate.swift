@@ -1,5 +1,3 @@
-// AppDelegate.swift
-
 import Cocoa
 import FlutterMacOS
 
@@ -17,6 +15,7 @@ class AppDelegate: FlutterAppDelegate {
 
         let wifiMethodChannel = FlutterMethodChannel(name: "com.example.wifi_info", binaryMessenger: controller.engine.binaryMessenger)
         let systemMethodChannel = FlutterMethodChannel(name: "com.example.system_info", binaryMessenger: controller.engine.binaryMessenger)
+        let processMethodChannel = FlutterMethodChannel(name: "com.example.process_info", binaryMessenger: controller.engine.binaryMessenger)
 
         wifiMethodChannel.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) in
             if call.method == "getWifiInfo" {
@@ -38,6 +37,18 @@ class AppDelegate: FlutterAppDelegate {
                     result(systemInfoDict)
                 } else {
                     result(FlutterError(code: "UNAVAILABLE", message: "System info not available", details: nil))
+                }
+            } else {
+                result(FlutterMethodNotImplemented)
+            }
+        }
+
+        processMethodChannel.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) in
+            if call.method == "getProcessInfo" {
+                if let processInfoDict = getProcessInfo() as NSDictionary? {
+                    result(processInfoDict)
+                } else {
+                    result(FlutterError(code: "UNAVAILABLE", message: "Process info not available", details: nil))
                 }
             } else {
                 result(FlutterMethodNotImplemented)

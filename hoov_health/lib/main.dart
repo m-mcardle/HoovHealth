@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
         '/dashboard': (context) => Dashboard(),
         '/bluetooth': (context) => BluetoothPage(),
         '/network': (context) => Network(),
-        '/applications': (context) => Apps(),
+        '/applications': (context) => Applications(),
         '/system': (context) => System(),
         '/systemHealth': (context) => MyHomePage(title: 'System Health'),
         '/otherHealth': (context) => MyHomePage(title: 'Other Health'),
