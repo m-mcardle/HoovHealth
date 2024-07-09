@@ -81,13 +81,13 @@ class DatabaseHelper {
     });
   }
 
-  Future<Map<String, dynamic>> getLatestNetworkScan() async {
+  Future<Map<String, dynamic>> getLatestNetworkScan(String query) async {
     final db = await database;
     // check if a record exists
     if ((await db.rawQuery('SELECT COUNT(*) FROM NetworkScan'))[0]['COUNT(*)'] == 0) {
       return {};
     }
-    return (await db.rawQuery('SELECT * FROM NetworkScan ORDER BY timestamp DESC LIMIT 1'))[0];
+    return (await db.rawQuery('$query ORDER BY timestamp DESC LIMIT 1'))[0];
   }
 
   Future insertSystemScan({

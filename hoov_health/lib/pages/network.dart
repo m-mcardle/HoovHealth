@@ -12,12 +12,14 @@ class Network extends StatefulWidget {
 
 class _NetworkState extends State<Network> {
   static const platform = MethodChannel('com.example.wifi_info');
-
   Map<String, dynamic> wifiInfo = {};
+  TextEditingController queryController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
+    // Set the default query
+    queryController.text = 'SELECT * FROM NetworkScan';
   }
 
   @override
@@ -54,8 +56,8 @@ class _NetworkState extends State<Network> {
             }
           }
 
-          Future<void> fetchLatestNetworkScan() async {
-            final result = await db.getLatestNetworkScan();
+          Future<void> fetchLatestNetworkScan(String query) async {
+            final result = await db.getLatestNetworkScan(query);
             setState(() {
               wifiInfo = result;
             });
@@ -63,42 +65,90 @@ class _NetworkState extends State<Network> {
           }
 
           if (wifiInfo.isEmpty) {
-            fetchLatestNetworkScan();
+            fetchLatestNetworkScan(queryController.text); // Fetch initially with default query
           }
 
           return Container(
             color: Colors.black,
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(40.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                ElevatedButton(
-                  onPressed: fetchWifiInfo,
-                  child: Text('Fetch Wi-Fi Info'),
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.pink,
+                Row(
+                  children: [
+                    Text(
+                      'Wi-Fi Info:',
+                      style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
                     ),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: TextField(
+                        controller: queryController,
+                        style: TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintText: 'Enter SQL query',
+                          hintStyle: TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          filled: true,
+                          fillColor: Colors.grey[800],
+                        ),
+                        onSubmitted: (query) {
+                          fetchLatestNetworkScan(query); // Update query on submission
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: fetchWifiInfo,
+                    child: Icon(Icons.wifi, color: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(40),
+                      backgroundColor: Colors.lightBlue,
+                    ),
+                  ),
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Wi-Fi Info:',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+                  'Results:',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 40),
                 Expanded(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: DataTable(
-                      columnSpacing: 20,
-                      columns: [
-                        DataColumn(label: Text('Property', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white))),
-                        DataColumn(label: Text('Value', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white))),
-                      ],
-                      rows: wifiInfo.entries.map((entry) {
-                        return DataRow(cells: [
-                          DataCell(Text(entry.key, style: TextStyle(color: Colors.white))),
-                          DataCell(Text(entry.value.toString(), style: TextStyle(color: Colors.white))),
-                        ]);
+                  child: Center(
+                    child: GridView.count(
+                      crossAxisCount: 3,
+                      childAspectRatio: 4,
+                      mainAxisSpacing: 20,
+                      crossAxisSpacing: 20,
+                      children: wifiInfo.entries.map((entry) {
+                        return ElevatedButton(
+                          onPressed: () {
+                            // Action when button is pressed (optional)
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                entry.key,
+                                style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 12),
+                              ),
+                              Text(
+                                entry.value.toString(),
+                                style: TextStyle(color: Colors.white, fontSize: 12),
+                              ),
+                            ],
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.pink,
+                            padding: EdgeInsets.all(8),
+                          ),
+                        );
                       }).toList(),
                     ),
                   ),
